@@ -21,22 +21,21 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Animation();
+        
         move = InputSystem.actions.FindAction("Move").ReadValue<Vector2>();
-
-        if (move.x > 0.1f)
+        Animation();
+        /*if (move.x > 0.1f)
         {
             sprite.flipX = false;
         }
         else if (move.x < -0.1f)
         {
             sprite.flipX = true;
-        }
+        }*/
     }
     void FixedUpdate()
     {
-        rb.linearVelocity = move * moveSpeed; // ตั้งค่าความเร็วการเคลื่อนที่ของ player โดยใช้ค่าของ move และ moveSpeed
-
+        rb.linearVelocity = new Vector2(move.x * moveSpeed, rb.linearVelocity.y); // ตั้งค่าความเร็วการเคลื่อนที่ของ player โดยใช้ค่าของ move และ moveSpeed
     }
 
     void Animation()
@@ -44,9 +43,30 @@ public class player : MonoBehaviour
         // x > 0 ขวา x < 0 ซ็าย
         // y > 0 บน y < 0 ด้านล่าง
         Debug.Log($"{move.x} ,{move.y}");
-        if (move.x > 0 )
+        if (move.x == 1 && move.y == 0)
         {
             Debug.Log("Moveright");
+            animator.SetBool("isWalking", true);
+            animator.SetFloat("inputx", move.x);
+            animator.SetFloat("inputy", move.y);
+        }
+        else if (move.x == -1 && move.y == 0)
+        {
+            Debug.Log("Moveleft");
+            animator.SetBool("isWalking", true);
+            animator.SetFloat("inputx", move.x);
+            animator.SetFloat("inputy", move.y);
+        }
+        else if (move.x == 0 && move.y == 1)
+        {
+            Debug.Log("Moveup");
+            animator.SetBool("isWalking", true);
+            animator.SetFloat("inputx", move.x);
+            animator.SetFloat("inputy", move.y);
+        }
+        else if (move.x == 0 && move.y == -1)
+        {
+            Debug.Log("Movedown");
             animator.SetBool("isWalking", true);
             animator.SetFloat("inputx", move.x);
             animator.SetFloat("inputy", move.y);
