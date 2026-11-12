@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class player : MonoBehaviour
 {
-    [SerializeField] string name = "Q";
+    [SerializeField] string Pname = "Q";
     [SerializeField] float moveSpeed = 5;
     [SerializeField] int health = 10;
     SpriteRenderer sprite;
@@ -35,7 +35,7 @@ public class player : MonoBehaviour
     }
     void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(move.x * moveSpeed, rb.linearVelocity.y); // ตั้งค่าความเร็วการเคลื่อนที่ของ player โดยใช้ค่าของ move และ moveSpeed
+        rb.linearVelocity = move * moveSpeed; // ตั้งค่าความเร็วการเคลื่อนที่ของ player โดยใช้ค่าของ move และ moveSpeed
     }
 
     void Animation()
