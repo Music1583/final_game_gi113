@@ -23,7 +23,7 @@ public class player : MonoBehaviour
     {
         
         move = InputSystem.actions.FindAction("Move").ReadValue<Vector2>();
-        Animation();
+        //Animation();
         /*if (move.x > 0.1f)
         {
             sprite.flipX = false;
@@ -37,48 +37,19 @@ public class player : MonoBehaviour
     {
         rb.linearVelocity = move * moveSpeed; // ตั้งค่าความเร็วการเคลื่อนที่ของ player โดยใช้ค่าของ move และ moveSpeed
     }
-
-    void Animation()
+    public void Move(InputAction.CallbackContext context)
     {
-        // x > 0 ขวา x < 0 ซ็าย
-        // y > 0 บน y < 0 ด้านล่าง
-        Debug.Log($"{move.x} ,{move.y}");
-        if (move.x == 1 && move.y == 0)
+        animator.SetBool("isWalking", true);
+
+        if (context.canceled)
         {
-            Debug.Log("Moveright");
-            animator.SetBool("isWalking", true);
-            animator.SetFloat("inputx", move.x);
-            animator.SetFloat("inputy", move.y);
-        }
-        else if (move.x == -1 && move.y == 0)
-        {
-            Debug.Log("Moveleft");
-            animator.SetBool("isWalking", true);
-            animator.SetFloat("inputx", move.x);
-            animator.SetFloat("inputy", move.y);
-        }
-        else if (move.x == 0 && move.y == 1)
-        {
-            Debug.Log("Moveup");
-            animator.SetBool("isWalking", true);
-            animator.SetFloat("inputx", move.x);
-            animator.SetFloat("inputy", move.y);
-        }
-        else if (move.x == 0 && move.y == -1)
-        {
-            Debug.Log("Movedown");
-            animator.SetBool("isWalking", true);
-            animator.SetFloat("inputx", move.x);
-            animator.SetFloat("inputy", move.y);
-        }
-        else 
-        {
-            Debug.Log("stay");
             animator.SetBool("isWalking", false);
             animator.SetFloat("lastInputX", move.x);
             animator.SetFloat("lastInputY", move.y);
         }
-        
+        move = context.ReadValue<Vector2>();
+        animator.SetFloat("inputx", move.x);
+        animator.SetFloat("inputy", move.y);  
     }
 
 }
