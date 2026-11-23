@@ -30,6 +30,7 @@ public class GhostShop : MonoBehaviour
             statusText.gameObject.SetActive(false);
         }
         timerText.text = time.ToString("F2");
+        timerText.gameObject.SetActive(false);
         itemText.text = "have " + myItem + " item";
     }
     public void interact(InputAction.CallbackContext context)
