@@ -4237,16 +4237,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1043850883}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.23028521, y: 0.3316107, z: 0.3316107}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1397407359}
+  m_Father: {fileID: 2111101938}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 35.2, y: 83}
+  m_AnchoredPosition: {x: 8.106041, y: 27.52369}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1043850885
@@ -4731,7 +4731,19 @@ MonoBehaviour:
     m_ActionId: 94fda1b6-406a-438a-9679-127191401d57
     m_ActionName: 'Player/interact[/Keyboard/e]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1340833989}
+        m_TargetAssemblyTypeName: logic, Assembly-CSharp
+        m_MethodName: menu
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: ff5e0565-024a-4d21-8ef1-9da227bf4ddd
     m_ActionName: 'Player/menu[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
@@ -4833,6 +4845,7 @@ MonoBehaviour:
   itemText: {fileID: 1683029734}
   statusText: {fileID: 244325191}
   finish: {fileID: 1456652390}
+  menus: {fileID: 2111101937}
 --- !u!1 &1249186827
 GameObject:
   m_ObjectHideFlags: 0
@@ -4994,6 +5007,7 @@ MonoBehaviour:
   itemText: {fileID: 1683029734}
   statusText: {fileID: 244325191}
   finish: {fileID: 1456652390}
+  menus: {fileID: 2111101937}
 --- !u!4 &1340833990
 Transform:
   m_ObjectHideFlags: 0
@@ -5105,7 +5119,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2111101938}
-  - {fileID: 1043850884}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5617,7 +5630,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Restart
+  m_text: Resume
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -38489,6 +38502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f928455a9c9e9d44ea5a02d841a912dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::menu
+  menus: {fileID: 0}
 --- !u!1 &2089729429
 GameObject:
   m_ObjectHideFlags: 0
@@ -38793,6 +38807,7 @@ RectTransform:
   - {fileID: 2104529675}
   - {fileID: 1494479898}
   - {fileID: 787558330}
+  - {fileID: 1043850884}
   m_Father: {fileID: 1397407359}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}

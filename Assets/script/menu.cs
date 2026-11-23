@@ -1,8 +1,10 @@
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class menu : MonoBehaviour
 {
+    public GameObject menus;
     public void PlayGame()
     {
         SceneManager.LoadSceneAsync(1);
@@ -11,6 +13,10 @@ public class menu : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("quit");
+    }
+    public void back()
+    {
+        menus.SetActive(false);
     }
     public void BackMain()
     {

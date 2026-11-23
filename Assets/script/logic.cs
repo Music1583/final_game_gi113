@@ -16,10 +16,12 @@ public class logic : MonoBehaviour
 
     bool isGameOver = false;
     public GameObject finish;
+    public GameObject menus;
     void Start()
     {
         Time.timeScale = 1f;
         finish.SetActive(false);
+        menus.SetActive(false);
     }
     void Update()
     {
@@ -54,6 +56,18 @@ public class logic : MonoBehaviour
             Debug.Log("หยิบของแล้ว! มีของ: " + myItem + " ชิ้น");
         }
         
+    }
+    public void menu(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Time.timeScale = 0f;
+            isGameOver = true;
+            menus.SetActive(true);
+            Debug.Log("กดปุ่ม esc สำเร็จ!");
+        }
+        
+
     }
 
 }
