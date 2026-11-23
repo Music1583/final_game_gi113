@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine.InputSystem;
 
 
-public class GhostShop : MonoBehaviour
+public class logic : MonoBehaviour
 {
 
     public float time = 10f;   // เวลา 10 วินาที
@@ -13,29 +13,41 @@ public class GhostShop : MonoBehaviour
     public TMP_Text timerText;
     public TMP_Text itemText;
     public TMP_Text statusText;
+
+    bool isGameOver = false;
+    public GameObject finish;
+    void Start()
+    {
+        Time.timeScale = 1f;
+        finish.SetActive(false);
+    }
     void Update()
     {
+        if (isGameOver) return;
         time -= Time.deltaTime;
-        
-        if (myItem >= needItem && time >= 0)
+        if (myItem >= needItem)
         {
-            statusText.text = "complete";
             Debug.Log("เย้! ของครบแล้ว รอดตาย!");
-            statusText.gameObject.SetActive(false);
+            finish.SetActive(true);
+            statusText.text = "complete";
+            isGameOver = true;
+            Time.timeScale = 0f;
         }
         else if (time <= 0 && myItem < needItem)
         {
+            finish.SetActive(true);
             statusText.text = "Die";
             Debug.Log("งั่ม! เวลาหมด โดนผีกิน!");
-            statusText.gameObject.SetActive(false);
+            isGameOver = true;
+            Time.timeScale = 0f;
         }
         timerText.text = time.ToString("F2");
-        timerText.gameObject.SetActive(false);
+
         itemText.text = "have " + myItem + " item";
     }
     public void interact(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && !isGameOver)
         {
             Debug.Log("กดปุ่ม E สำเร็จ!");
             myItem++;
