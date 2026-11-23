@@ -1,5 +1,6 @@
-using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 
@@ -18,17 +19,21 @@ public class logic : MonoBehaviour
     bool isPaused = false;
     public GameObject finish;
     public GameObject menus;
+    public int takeItem = 0;
+
+    public Animator anim; // ลากคอมโพเนนต์ Animator มาใส่ในหน้า Inspector
     void Start()
     {
         Time.timeScale = 1f;
         finish.SetActive(false);
         menus.SetActive(false);
+        anim.Play("walk");
     }
     void Update()
     {
-        if (isGameOver) return;
+    if (isGameOver) return;
         time -= Time.deltaTime;
-        if (myItem >= needItem)
+        /*if (myItem >= needItem)
         {
             Debug.Log("เย้! ของครบแล้ว รอดตาย!");
             finish.SetActive(true);
@@ -43,10 +48,11 @@ public class logic : MonoBehaviour
             Debug.Log("งั่ม! เวลาหมด โดนผีกิน!");
             isGameOver = true;
             Time.timeScale = 0f;
-        }
+        }*/
         timerText.text = time.ToString("F2");
 
         itemText.text = "have " + myItem + " item";
+
     }
     public void interact(InputAction.CallbackContext context)
     {
@@ -54,6 +60,7 @@ public class logic : MonoBehaviour
         {
             Debug.Log("กดปุ่ม E สำเร็จ!");
             myItem++;
+            takeItem++;
             Debug.Log("หยิบของแล้ว! มีของ: " + myItem + " ชิ้น");
         }
         
@@ -80,5 +87,21 @@ public class logic : MonoBehaviour
             }
         }
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("water"))
+        {
+            if (takeItem > 1)
+            {
+                Destroy(other.gameObject);
+                
+            }
+            
+        }
+           
+    }
+
+    
 
 }
