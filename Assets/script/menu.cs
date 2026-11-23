@@ -12,5 +12,9 @@ public class menu : MonoBehaviour
         Application.Quit();
         Debug.Log("quit");
     }
+    public void BackMain()
+    {
+        SceneManager.LoadSceneAsync(0);
+    }
 
 }
