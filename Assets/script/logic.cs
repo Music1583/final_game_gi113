@@ -15,6 +15,7 @@ public class logic : MonoBehaviour
     public TMP_Text statusText;
 
     bool isGameOver = false;
+    bool isPaused = false;
     public GameObject finish;
     public GameObject menus;
     void Start()
@@ -59,15 +60,25 @@ public class logic : MonoBehaviour
     }
     public void menu(InputAction.CallbackContext context)
     {
+        if(isGameOver) return;
+
         if (context.performed)
         {
-            Time.timeScale = 0f;
-            isGameOver = true;
-            menus.SetActive(true);
-            Debug.Log("กดปุ่ม esc สำเร็จ!");
-        }
-        
+            isPaused = !isPaused; // สลับค่า true <-> false ทุกครั้งที่กด
 
+            if (isPaused) // กดครั้งแรก: หยุดเกม (Freeze)
+            {
+                Time.timeScale = 0f;
+                menus.SetActive(true);
+                Debug.Log("กดปุ่ม esc: หยุดเกม!");
+            }
+            else // กดครั้งที่สอง: กลับเป็นปกติ
+            {
+                Time.timeScale = 1f;
+                menus.SetActive(false);
+                Debug.Log("กดปุ่ม esc: เล่นต่อ!");
+            }
+        }
     }
 
 }
