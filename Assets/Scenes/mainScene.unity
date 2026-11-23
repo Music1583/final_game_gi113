@@ -5079,8 +5079,8 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1340833989}
-        m_TargetAssemblyTypeName: GhostShop, Assembly-CSharp
+      - m_Target: {fileID: 1176487151}
+        m_TargetAssemblyTypeName: logic, Assembly-CSharp
         m_MethodName: interact
         m_Mode: 0
         m_Arguments:
@@ -5095,7 +5095,7 @@ MonoBehaviour:
     m_ActionName: 'Player/interact[/Keyboard/e]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1340833989}
+      - m_Target: {fileID: 1176487151}
         m_TargetAssemblyTypeName: logic, Assembly-CSharp
         m_MethodName: menu
         m_Mode: 0
@@ -5201,6 +5201,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b6aefe72f629fe4991ab1ad4f18ae65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GhostShop
+  waters:
+  - {fileID: 856676013}
+  - {fileID: 140772368}
+  - {fileID: 926465821}
+  - {fileID: 1268659377}
   time: 1000
   needItem: 3
   myItem: 0
@@ -5479,7 +5484,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1340833990}
-  - component: {fileID: 1340833989}
   - component: {fileID: 1340833991}
   m_Layer: 0
   m_Name: gameSystem
@@ -5488,27 +5492,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1340833989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1340833988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b6aefe72f629fe4991ab1ad4f18ae65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GhostShop
-  time: 10
-  needItem: 3
-  myItem: 0
-  timerText: {fileID: 1120479992}
-  itemText: {fileID: 1683029734}
-  statusText: {fileID: 244325191}
-  finish: {fileID: 1456652390}
-  menus: {fileID: 2111101937}
-  anim: {fileID: 2089729432}
 --- !u!4 &1340833990
 Transform:
   m_ObjectHideFlags: 0
