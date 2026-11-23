@@ -38,9 +38,9 @@
                 },
                 {
                     "name": "interact",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "94fda1b6-406a-438a-9679-127191401d57",
-                    "expectedControlType": "Touch",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true,
@@ -274,7 +274,7 @@
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Keyboard&Mouse",
                     "action": "interact",
                     "isComposite": false,
                     "isPartOfComposite": false

@@ -288,9 +288,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 824456600}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 111, y: -150}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -1, y: -57}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &244325191
@@ -313,7 +313,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3431,7 +3431,6 @@ GameObject:
   - component: {fileID: 591040759}
   - component: {fileID: 591040758}
   - component: {fileID: 591040757}
-  - component: {fileID: 591040756}
   m_Layer: 5
   m_Name: waterButton
   m_TagString: Untagged
@@ -3459,21 +3458,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &591040756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591040754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b6aefe72f629fe4991ab1ad4f18ae65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GhostShop
-  time: 10
-  needItem: 3
-  myItem: 0
 --- !u!114 &591040757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3869,7 +3853,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3965,6 +3949,7 @@ GameObject:
   - component: {fileID: 1176487145}
   - component: {fileID: 1176487144}
   - component: {fileID: 1176487143}
+  - component: {fileID: 1176487151}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -3979,7 +3964,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1176487142}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b9f7faced5713e4499df083baac6d50, type: 3}
   m_Name: 
@@ -4176,6 +4161,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: b8f305d4-2c38-45a4-b35b-1187d59e8780
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1340833989}
+        m_TargetAssemblyTypeName: GhostShop, Assembly-CSharp
+        m_MethodName: interact
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 94fda1b6-406a-438a-9679-127191401d57
+    m_ActionName: 'Player/interact[/Keyboard/e]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -4256,6 +4257,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1176487151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176487142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b6aefe72f629fe4991ab1ad4f18ae65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GhostShop
+  time: 10
+  needItem: 3
+  myItem: 0
+  timerText: {fileID: 1120479992}
+  itemText: {fileID: 1683029734}
+  statusText: {fileID: 244325191}
 --- !u!1 &1249186827
 GameObject:
   m_ObjectHideFlags: 0
@@ -4413,6 +4432,9 @@ MonoBehaviour:
   time: 10
   needItem: 3
   myItem: 0
+  timerText: {fileID: 1120479992}
+  itemText: {fileID: 1683029734}
+  statusText: {fileID: 0}
 --- !u!4 &1340833990
 Transform:
   m_ObjectHideFlags: 0
@@ -11613,7 +11635,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
