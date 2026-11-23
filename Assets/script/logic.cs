@@ -52,7 +52,6 @@ public class logic : MonoBehaviour
             Debug.Log("กดปุ่ม E สำเร็จ!");
             myItem++;
             Debug.Log("หยิบของแล้ว! มีของ: " + myItem + " ชิ้น");
-
         }
         
     }
