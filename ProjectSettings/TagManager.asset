@@ -6,6 +6,12 @@ TagManager:
   tags:
   - water
   - snack
+  - water1
+  - water2
+  - water3
+  - snack1
+  - snack2
+  - snack3
   layers:
   - Default
   - TransparentFX

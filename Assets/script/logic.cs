@@ -89,6 +89,53 @@ public class logic : MonoBehaviour
             currentItem = other.gameObject;
             Debug.Log("เข้ามายืน");
         }
+        else if (other.CompareTag("water1"))
+        {
+            inCollision = true;
+            currentItem = other.gameObject;
+            Debug.Log("เข้ามายืน");
+        }
+        else if(other.CompareTag("water2"))
+        {
+            inCollision = true;
+            currentItem = other.gameObject;
+            Debug.Log("เข้ามายืน");
+        }
+        else if (other.CompareTag("water3"))
+        {
+            inCollision = true;
+            currentItem = other.gameObject;
+            Debug.Log("เข้ามายืน");
+        }
+        else if (other.CompareTag("snack"))
+        {
+            inCollision = true;
+            currentItem = other.gameObject;
+            Debug.Log("เข้ามายืน");
+        }
+        else if (other.CompareTag("snack1"))
+        {
+            inCollision = true;
+            currentItem = other.gameObject;
+            Debug.Log("เข้ามายืน");
+        }
+        else if (other.CompareTag("snack2"))
+        {
+            inCollision = true;
+            currentItem = other.gameObject;
+            Debug.Log("เข้ามายืน");
+        }
+        else if (other.CompareTag("snack3"))
+        {
+            inCollision = true;
+            currentItem = other.gameObject;
+            Debug.Log("เข้ามายืน");
+        }
+        else
+        {
+            Debug.Log("ไม่รู้ชื่อ");
+        }
+        
     }
 
     // ทำงานตอนเดินถอยห่างออกจากไอเทม
