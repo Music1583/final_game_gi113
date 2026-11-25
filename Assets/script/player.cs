@@ -23,15 +23,6 @@ public class player : MonoBehaviour
     {
         
         move = InputSystem.actions.FindAction("Move").ReadValue<Vector2>();
-        //Animation();
-        /*if (move.x > 0.1f)
-        {
-            sprite.flipX = false;
-        }
-        else if (move.x < -0.1f)
-        {
-            sprite.flipX = true;
-        }*/
     }
     void FixedUpdate()
     {
