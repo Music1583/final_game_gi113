@@ -12,6 +12,7 @@ TagManager:
   - snack1
   - snack2
   - snack3
+  - sign
   layers:
   - Default
   - TransparentFX

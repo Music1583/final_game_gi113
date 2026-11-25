@@ -36,7 +36,7 @@ public class logic : MonoBehaviour
 
         time -= Time.deltaTime;
         timerText.text = Mathf.Max(0, time).ToString("F2");
-        itemText.text = "have " + myItem + " item";
+        itemText.text = myItem + " item";
     }
 
     public void interact(InputAction.CallbackContext context)
