@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,6 +14,7 @@ public class menu : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("quit");
+        UnityEditor.EditorApplication.isPlaying = false;
     }
     public void back()
     {
