@@ -14,7 +14,11 @@ public class menu : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("quit");
+#if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
     }
     public void back()
     {
