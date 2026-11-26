@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Platformer_Start.unity
     guid: 24c6abade7167d14a9290b9f6869bf1b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/mainscene.unity
     guid: 3b1d263be9771fb4f91217b68f3896c2
   m_configObjects:

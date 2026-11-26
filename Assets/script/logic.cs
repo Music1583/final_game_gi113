@@ -1,12 +1,13 @@
 using TMPro;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class logic : MonoBehaviour
 {
     public GameObject[] waters = new GameObject[4];
-    public float time = 10f;   // เวลา 10 วินาที
-    public int needItem = 3;   // ผีสั่งของ 3 ชิ้น
+    public float time = 15f;   // เวลา 10 วินาที
+    public int needItem = 4;   // ผีสั่งของ 3 ชิ้น
     public int myItem = 0;     // ของที่เราหยิบได้ตอนนี้
 
     public TMP_Text timerText;
@@ -22,6 +23,9 @@ public class logic : MonoBehaviour
     GameObject currentItem; // เก็บวัตถุไอเทมที่กำลังชนอยู่
     public Animator anim;
 
+    public pointSign quest;
+    public int show;
+
     void Start()
     {
         Time.timeScale = 1f;
@@ -33,19 +37,34 @@ public class logic : MonoBehaviour
     void Update()
     {
         if (isGameOver) return;
-
-        time -= Time.deltaTime;
-        timerText.text = Mathf.Max(0, time).ToString("F2");
+        if (quest.showQuest == 1)
+        {
+            Time.timeScale = 0f;
+        }
+        if (show  == 1)
+        {
+            time -= Time.deltaTime;
+        } 
+        timerText.text = time.ToString("F0");
         itemText.text = myItem + " item";
+        if (myItem >= needItem)
+        {
+            Time.timeScale = 0f;
+            finish.SetActive(true);
+            statusText.text = "Quest Complete";
+        }
+        else if (time < 0)
+        {
+            Time.timeScale = 0f;
+            finish.SetActive(true);
+            statusText.text = "Quest Fail";
+        } 
     }
 
     public void interact(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
-            // ปริ้นท์ค่าตัวแปรทั้งหมดออกมาดูตอนกดปุ่ม E
-            Debug.Log($"กด E -> GameOver:{isGameOver} | Paused:{isPaused} | ชนอยู่:{inCollision} | ของ:{currentItem}");
-
             if (!isGameOver && !isPaused && inCollision && currentItem != null)
             {
                 Debug.Log("หยิบของสำเร็จ!");
@@ -53,6 +72,10 @@ public class logic : MonoBehaviour
                 Destroy(currentItem);
                 inCollision = false;
                 currentItem = null;
+            }
+            if (quest.showQuest == 1)
+            {
+                show = 1;
             }
         }
     }
