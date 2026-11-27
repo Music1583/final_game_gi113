@@ -2,30 +2,26 @@ using UnityEngine;
 
 public class RandomSprite : MonoBehaviour
 {
-    public SpriteRenderer spriteRenderer; // ลาก SpriteRenderer ของวัตถุมาใส่
-    public Sprite[] spriteList;           // ช่องเก็บรายการรูปภาพทั้งหมดที่จะสุ่ม
+
 
     public GameObject[] water;
     public GameObject[] snack;
-
-    int item;
-
-    void Start()
-    {
-        item = Random.Range(1, 4);
-        ChangeRandomSprite(); // สุ่มเปลี่ยนรูปทันทีตอนเริ่มเกม
-        SetPointRandomSprite();
-    }
-
-    // ฟังก์ชันสำหรับสั่งสุ่มรูป (เรียกใช้ตอนกดปุ่ม หรือตอนเกิดเหตุการณ์ได้)
+    public SpriteRenderer spriteRenderer; 
+    public Sprite[] spriteList;           
     public void ChangeRandomSprite()
     {
-        // เช็กป้องกัน Error กรณีลืมใส่รูปในช่อง Sprite List
         if (spriteList.Length > 0)
         {
             int randomIndex = Random.Range(0, spriteList.Length);
             spriteRenderer.sprite = spriteList[randomIndex];
         }
+    }
+    int item;
+    void Start()
+    {
+        item = Random.Range(1, 4);
+        ChangeRandomSprite();
+        SetPointRandomSprite();
     }
     public void SetPointRandomSprite()
     {

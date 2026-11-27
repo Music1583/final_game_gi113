@@ -17,7 +17,7 @@ public class pointSign : MonoBehaviour
     {
         if (showQuest == 1 && !everShow)
         {
-            if (show.show == 1 && !everShow)
+            if (show.show == 1)
             {
                 
                 quest.SetActive(false);
@@ -32,7 +32,7 @@ public class pointSign : MonoBehaviour
             } 
         } 
     }
-    void OnTriggerStay2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("sign") && !everShow)
         {
