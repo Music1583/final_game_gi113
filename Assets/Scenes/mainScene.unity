@@ -288,13 +288,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce01833e8fd65cb4e9d75f50f9356c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomSprite
-  spriteRenderer: {fileID: 140772371}
-  spriteList:
-  - {fileID: -6860487137229460656, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
-  - {fileID: -5277220536919869763, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
-  - {fileID: 7630843995920431675, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
-  - {fileID: 6474709782150735786, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
-  - {fileID: 3432619402653835079, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
   water:
   - {fileID: 856676013}
   - {fileID: 140772368}
@@ -305,6 +298,13 @@ MonoBehaviour:
   - {fileID: 984476325}
   - {fileID: 781604867}
   - {fileID: 1452154848}
+  spriteRenderer: {fileID: 140772371}
+  spriteList:
+  - {fileID: -6860487137229460656, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
+  - {fileID: -5277220536919869763, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
+  - {fileID: 7630843995920431675, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
+  - {fileID: 6474709782150735786, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
+  - {fileID: 3432619402653835079, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
 --- !u!95 &140772370
 Animator:
   serializedVersion: 7
@@ -473,7 +473,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244325189}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0441772, y: 1.0441774, z: 1.0441774}
   m_ConstrainProportionsScale: 0
@@ -482,8 +482,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -106.92868, y: 87.19495}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 2.4445, y: 70}
+  m_SizeDelta: {x: 318.5967, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &244325191
 MonoBehaviour:
@@ -532,8 +532,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -571,7 +571,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -196.19812, w: 0}
+  m_margin: {x: -0.000000007041291, y: 0, z: 0.24297334, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -621,7 +621,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -18.372784, y: 48.05652}
+  m_AnchoredPosition: {x: -0.000011444, y: 47.4}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &339416534
@@ -3660,13 +3660,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce01833e8fd65cb4e9d75f50f9356c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomSprite
-  spriteRenderer: {fileID: 380170092}
-  spriteList:
-  - {fileID: -7887250650300270766, guid: 404dc282968c53a48a38380ae3679148, type: 3}
-  - {fileID: -3136827916462536501, guid: 404dc282968c53a48a38380ae3679148, type: 3}
-  - {fileID: -1357848798831808831, guid: 404dc282968c53a48a38380ae3679148, type: 3}
-  - {fileID: -7943847054873747505, guid: 404dc282968c53a48a38380ae3679148, type: 3}
-  - {fileID: -1902117876096342451, guid: 404dc282968c53a48a38380ae3679148, type: 3}
   water:
   - {fileID: 856676013}
   - {fileID: 140772368}
@@ -3677,6 +3670,13 @@ MonoBehaviour:
   - {fileID: 984476325}
   - {fileID: 781604867}
   - {fileID: 1452154848}
+  spriteRenderer: {fileID: 380170092}
+  spriteList:
+  - {fileID: -7887250650300270766, guid: 404dc282968c53a48a38380ae3679148, type: 3}
+  - {fileID: -3136827916462536501, guid: 404dc282968c53a48a38380ae3679148, type: 3}
+  - {fileID: -1357848798831808831, guid: 404dc282968c53a48a38380ae3679148, type: 3}
+  - {fileID: -7943847054873747505, guid: 404dc282968c53a48a38380ae3679148, type: 3}
+  - {fileID: -1902117876096342451, guid: 404dc282968c53a48a38380ae3679148, type: 3}
 --- !u!61 &380170096
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4121,7 +4121,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -18.372784, y: -23.1}
+  m_AnchoredPosition: {x: -0.000011444, y: -25.6}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &591040757
@@ -4170,7 +4170,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2010118423}
         m_TargetAssemblyTypeName: menu, Assembly-CSharp
-        m_MethodName: PlayGame
+        m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4245,7 +4245,7 @@ RectTransform:
   m_GameObject: {fileID: 675929454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 591040755}
@@ -4279,7 +4279,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: c2abee3ccff4d284cae86667076d2d73, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -4323,8 +4323,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce01833e8fd65cb4e9d75f50f9356c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  spriteRenderer: {fileID: 0}
-  spriteList: []
   water:
   - {fileID: 856676013}
   - {fileID: 140772368}
@@ -4335,6 +4333,8 @@ MonoBehaviour:
   - {fileID: 984476325}
   - {fileID: 781604867}
   - {fileID: 1452154848}
+  spriteRenderer: {fileID: 0}
+  spriteList: []
 --- !u!4 &708485549
 Transform:
   m_ObjectHideFlags: 0
@@ -4551,13 +4551,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce01833e8fd65cb4e9d75f50f9356c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomSprite
-  spriteRenderer: {fileID: 781604871}
-  spriteList:
-  - {fileID: -7887250650300270766, guid: 404dc282968c53a48a38380ae3679148, type: 3}
-  - {fileID: -3136827916462536501, guid: 404dc282968c53a48a38380ae3679148, type: 3}
-  - {fileID: -1357848798831808831, guid: 404dc282968c53a48a38380ae3679148, type: 3}
-  - {fileID: -7943847054873747505, guid: 404dc282968c53a48a38380ae3679148, type: 3}
-  - {fileID: -1902117876096342451, guid: 404dc282968c53a48a38380ae3679148, type: 3}
   water:
   - {fileID: 856676013}
   - {fileID: 140772368}
@@ -4568,6 +4561,13 @@ MonoBehaviour:
   - {fileID: 984476325}
   - {fileID: 781604867}
   - {fileID: 1452154848}
+  spriteRenderer: {fileID: 781604871}
+  spriteList:
+  - {fileID: -7887250650300270766, guid: 404dc282968c53a48a38380ae3679148, type: 3}
+  - {fileID: -3136827916462536501, guid: 404dc282968c53a48a38380ae3679148, type: 3}
+  - {fileID: -1357848798831808831, guid: 404dc282968c53a48a38380ae3679148, type: 3}
+  - {fileID: -7943847054873747505, guid: 404dc282968c53a48a38380ae3679148, type: 3}
+  - {fileID: -1902117876096342451, guid: 404dc282968c53a48a38380ae3679148, type: 3}
 --- !u!95 &781604870
 Animator:
   serializedVersion: 7
@@ -4901,13 +4901,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce01833e8fd65cb4e9d75f50f9356c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomSprite
-  spriteRenderer: {fileID: 856676014}
-  spriteList:
-  - {fileID: -6860487137229460656, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
-  - {fileID: -5277220536919869763, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
-  - {fileID: 7630843995920431675, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
-  - {fileID: 6474709782150735786, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
-  - {fileID: 3432619402653835079, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
   water:
   - {fileID: 856676013}
   - {fileID: 140772368}
@@ -4918,6 +4911,13 @@ MonoBehaviour:
   - {fileID: 984476325}
   - {fileID: 781604867}
   - {fileID: 1452154848}
+  spriteRenderer: {fileID: 856676014}
+  spriteList:
+  - {fileID: -6860487137229460656, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
+  - {fileID: -5277220536919869763, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
+  - {fileID: 7630843995920431675, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
+  - {fileID: 6474709782150735786, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
+  - {fileID: 3432619402653835079, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
 --- !u!61 &856676018
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5208,13 +5208,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce01833e8fd65cb4e9d75f50f9356c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomSprite
-  spriteRenderer: {fileID: 926465824}
-  spriteList:
-  - {fileID: -6860487137229460656, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
-  - {fileID: -5277220536919869763, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
-  - {fileID: 7630843995920431675, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
-  - {fileID: 6474709782150735786, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
-  - {fileID: 3432619402653835079, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
   water:
   - {fileID: 856676013}
   - {fileID: 140772368}
@@ -5225,6 +5218,13 @@ MonoBehaviour:
   - {fileID: 984476325}
   - {fileID: 781604867}
   - {fileID: 1452154848}
+  spriteRenderer: {fileID: 926465824}
+  spriteList:
+  - {fileID: -6860487137229460656, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
+  - {fileID: -5277220536919869763, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
+  - {fileID: 7630843995920431675, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
+  - {fileID: 6474709782150735786, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
+  - {fileID: 3432619402653835079, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
 --- !u!95 &926465823
 Animator:
   serializedVersion: 7
@@ -5446,13 +5446,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce01833e8fd65cb4e9d75f50f9356c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomSprite
-  spriteRenderer: {fileID: 984476329}
-  spriteList:
-  - {fileID: -7887250650300270766, guid: 404dc282968c53a48a38380ae3679148, type: 3}
-  - {fileID: -3136827916462536501, guid: 404dc282968c53a48a38380ae3679148, type: 3}
-  - {fileID: -1357848798831808831, guid: 404dc282968c53a48a38380ae3679148, type: 3}
-  - {fileID: -7943847054873747505, guid: 404dc282968c53a48a38380ae3679148, type: 3}
-  - {fileID: -1902117876096342451, guid: 404dc282968c53a48a38380ae3679148, type: 3}
   water:
   - {fileID: 856676013}
   - {fileID: 140772368}
@@ -5463,6 +5456,13 @@ MonoBehaviour:
   - {fileID: 984476325}
   - {fileID: 781604867}
   - {fileID: 1452154848}
+  spriteRenderer: {fileID: 984476329}
+  spriteList:
+  - {fileID: -7887250650300270766, guid: 404dc282968c53a48a38380ae3679148, type: 3}
+  - {fileID: -3136827916462536501, guid: 404dc282968c53a48a38380ae3679148, type: 3}
+  - {fileID: -1357848798831808831, guid: 404dc282968c53a48a38380ae3679148, type: 3}
+  - {fileID: -7943847054873747505, guid: 404dc282968c53a48a38380ae3679148, type: 3}
+  - {fileID: -1902117876096342451, guid: 404dc282968c53a48a38380ae3679148, type: 3}
 --- !u!95 &984476328
 Animator:
   serializedVersion: 7
@@ -6508,13 +6508,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce01833e8fd65cb4e9d75f50f9356c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomSprite
-  spriteRenderer: {fileID: 1268659380}
-  spriteList:
-  - {fileID: -6860487137229460656, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
-  - {fileID: -5277220536919869763, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
-  - {fileID: 7630843995920431675, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
-  - {fileID: 6474709782150735786, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
-  - {fileID: 3432619402653835079, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
   water:
   - {fileID: 856676013}
   - {fileID: 140772368}
@@ -6525,6 +6518,13 @@ MonoBehaviour:
   - {fileID: 984476325}
   - {fileID: 781604867}
   - {fileID: 1452154848}
+  spriteRenderer: {fileID: 1268659380}
+  spriteList:
+  - {fileID: -6860487137229460656, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
+  - {fileID: -5277220536919869763, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
+  - {fileID: 7630843995920431675, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
+  - {fileID: 6474709782150735786, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
+  - {fileID: 3432619402653835079, guid: 86a2d1b555293fb4ab78a4c4621fef7c, type: 3}
 --- !u!95 &1268659379
 Animator:
   serializedVersion: 7
@@ -6704,7 +6704,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -18.372784, y: -55.6}
+  m_AnchoredPosition: {x: -0.000011444, y: -55.6}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1294591432
@@ -7222,13 +7222,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce01833e8fd65cb4e9d75f50f9356c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomSprite
-  spriteRenderer: {fileID: 1452154852}
-  spriteList:
-  - {fileID: -7887250650300270766, guid: 404dc282968c53a48a38380ae3679148, type: 3}
-  - {fileID: -3136827916462536501, guid: 404dc282968c53a48a38380ae3679148, type: 3}
-  - {fileID: -1357848798831808831, guid: 404dc282968c53a48a38380ae3679148, type: 3}
-  - {fileID: -7943847054873747505, guid: 404dc282968c53a48a38380ae3679148, type: 3}
-  - {fileID: -1902117876096342451, guid: 404dc282968c53a48a38380ae3679148, type: 3}
   water:
   - {fileID: 856676013}
   - {fileID: 140772368}
@@ -7239,6 +7232,13 @@ MonoBehaviour:
   - {fileID: 984476325}
   - {fileID: 781604867}
   - {fileID: 1452154848}
+  spriteRenderer: {fileID: 1452154852}
+  spriteList:
+  - {fileID: -7887250650300270766, guid: 404dc282968c53a48a38380ae3679148, type: 3}
+  - {fileID: -3136827916462536501, guid: 404dc282968c53a48a38380ae3679148, type: 3}
+  - {fileID: -1357848798831808831, guid: 404dc282968c53a48a38380ae3679148, type: 3}
+  - {fileID: -7943847054873747505, guid: 404dc282968c53a48a38380ae3679148, type: 3}
+  - {fileID: -1902117876096342451, guid: 404dc282968c53a48a38380ae3679148, type: 3}
 --- !u!95 &1452154851
 Animator:
   serializedVersion: 7
